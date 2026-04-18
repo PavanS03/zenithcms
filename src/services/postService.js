@@ -1,6 +1,3 @@
-// Using localStorage to provide a 100% working, error-free complete mock backend
-// This bypasses any Supabase RLS Database errors entirely.
-
 const DB_KEY = "zenithCMS_posts";
 
 const getLocalPosts = () => {
@@ -16,7 +13,7 @@ const saveLocalPosts = (posts) => {
   localStorage.setItem(DB_KEY, JSON.stringify(posts));
 };
 
-// Simulated delay for realistic backend feel
+
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 export const getPosts = async () => {
@@ -24,7 +21,7 @@ export const getPosts = async () => {
     await delay(300);
     const posts = getLocalPosts();
     
-    // Sort descending by created_at
+
     posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
     
     return { success: true, data: posts };
@@ -52,7 +49,7 @@ export const createPost = async (post) => {
     await delay(400); 
     const posts = getLocalPosts();
     
-    // Create new post with generated ID
+
     const newPost = {
       ...post,
       id: crypto.randomUUID ? crypto.randomUUID() : Date.now().toString()
