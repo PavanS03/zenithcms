@@ -22,7 +22,6 @@ export function AuthProvider({ children }) {
         }
       }
     } catch (error) {
-      console.log("❌ Invalid JSON → cleared");
       localStorage.removeItem("user");
     }
 

@@ -12,7 +12,6 @@ export const getPosts = async () => {
 
     return { success: true, data };
   } catch (error) {
-    console.error("Error fetching posts:", error.message);
     return { success: false, error: error.message };
   }
 };
@@ -31,7 +30,6 @@ export const getPostById = async (id) => {
 
     return { success: true, data };
   } catch (error) {
-    console.error("Error fetching post:", error.message);
     return { success: false, error: error.message };
   }
 };
@@ -42,13 +40,13 @@ export const createPost = async (post) => {
   try {
     const { data, error } = await supabase
       .from("posts")
-      .insert([post]);
+      .insert([post])
+      .select();
 
     if (error) throw error;
 
     return { success: true, data };
   } catch (error) {
-    console.error("Error creating post:", error.message);
     return { success: false, error: error.message };
   }
 };
@@ -60,13 +58,13 @@ export const updatePost = async (id, updatedData) => {
     const { data, error } = await supabase
       .from("posts")
       .update(updatedData)
-      .eq("id", id);
+      .eq("id", id)
+      .select();
 
     if (error) throw error;
 
     return { success: true, data };
   } catch (error) {
-    console.error("Error updating post:", error.message);
     return { success: false, error: error.message };
   }
 };
@@ -83,7 +81,6 @@ export const deletePost = async (id) => {
 
     return { success: true };
   } catch (error) {
-    console.error("Error deleting post:", error.message);
     return { success: false, error: error.message };
   }
 };
@@ -100,7 +97,6 @@ export const likePost = async (id, currentLikes = 0) => {
 
     return { success: true, data };
   } catch (error) {
-    console.error("Error liking post:", error.message);
     return { success: false, error: error.message };
   }
 };

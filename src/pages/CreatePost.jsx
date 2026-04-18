@@ -101,7 +101,7 @@ function CreatePost() {
 
       setTimeout(() => navigate("/home"), 1200);
     } else {
-      setMessage("Error ❌");
+      setMessage(`Error ❌: ${response.error || 'Unknown error'}`);
     }
   };
 

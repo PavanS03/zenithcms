@@ -14,7 +14,8 @@ function PostDetails() {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
 
-  const currentUser = localStorage.getItem("user");
+  const storedUser = localStorage.getItem("user");
+  const currentUser = storedUser ? JSON.parse(storedUser) : null;
 
   useEffect(() => {
     fetchPost();
@@ -139,7 +140,7 @@ function PostDetails() {
               👍 {post.likes || 0}
             </motion.button>
 
-            {post.author_id === currentUser && (
+            {currentUser && post.author_id === currentUser.email && (
               <>
                 <motion.button
                   className="btn"
