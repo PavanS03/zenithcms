@@ -38,7 +38,7 @@ This project was developed during my internship at Navodita Infotech, focusing o
  Installation & Setup
 
 1. Clone the repository
-   git clone https://github.com/your-username/zenithcms.git
+   git clone https://github.com/PavanS03/zenithcms.git
 
 2. Navigate to the project directory
    cd zenithcms
