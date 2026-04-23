@@ -1,16 +1,81 @@
-# React + Vite
+ZenithCMS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ZenithCMS is a modern Content Management System built using React.js, designed to simplify the process of creating, managing, and publishing digital content through an intuitive and responsive interface.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+ Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Managing content efficiently is a common challenge for individuals and small teams. ZenithCMS addresses this by providing a streamlined platform where users can create, edit, and organize content without complexity.
 
-## Expanding the ESLint configuration
+This project was developed during my internship at Navodita Infotech, focusing on building a scalable and user-friendly frontend system.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+ Key Features
+
+- User authentication (login and registration)
+- Create, edit, and delete posts
+- Image upload with real-time preview
+- Search functionality for quick content access
+- User-specific dashboards
+- Admin-level control for managing all content
+- Responsive design for mobile and desktop
+- Smooth UI interactions using animations
+
+ 
+
+ Tech Stack
+
+- React.js
+- JavaScript (ES6+)
+- HTML5 & CSS3
+- Framer Motion (for animations)
+- Browser Storage / Backend Integration (if applicable)
+
+
+
+ Installation & Setup
+
+1. Clone the repository
+   git clone https://github.com/your-username/zenithcms.git
+
+2. Navigate to the project directory
+   cd zenithcms
+
+3. Install dependencies
+   npm install
+
+4. Start the development server
+   npm start
+
+
+
+ Project Structure
+
+- /components → Reusable UI components
+- /pages → Application pages
+- /assets → Images and static files
+- /utils → Helper functions
+
+
+
+ Future Improvements
+
+- Backend integration with database
+- Role-based access control
+- Rich text editor for content creation
+- Performance optimization
+
+
+ Author
+
+Developed by Pavan
+Intern at Navodita Infotech
+
+
+
+ Contact
+
+LinkedIn: (www.linkedin.com.pavan2901)
+GitHub: https://github.com/PavanS03
