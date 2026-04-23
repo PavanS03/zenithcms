@@ -77,5 +77,5 @@ Intern at Navodita Infotech
 
  Contact
 
-LinkedIn: (www.linkedin.com.pavan2901)
+LinkedIn: (https://linkedin.com/in/pavan2901)
 GitHub: https://github.com/PavanS03
